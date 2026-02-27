@@ -12,13 +12,13 @@
 
 MedAgent 360 is a unified, end-to-end autonomous AI agent that:
 
-**🔬 Module A — Lab Report Intelligence (PS #24)**
+**🔬 Module A — Lab Report Intelligence**
 Reads a PDF blood report → extracts all test values → compares against medical benchmarks using RAG → classifies each as NORMAL / HIGH / LOW / CRITICAL → generates a plain-language summary in Telugu, Hindi, or English → plays it as audio.
 
-**💊 Module B — Prescription Parser (PS #22)**
+**💊 Module B — Prescription Parser**
 Accepts a prescription photo (printed or handwritten) → preprocesses with OpenCV (grayscale, denoise, deskew) → runs Tesseract OCR → uses Gemini to identify medicine names, dosage, frequency, duration → translates instructions to Telugu/Hindi → generates per-medicine voice audio → schedules WhatsApp medication reminders.
 
-**📞 Module C — Autonomous Follow-up Agent (PS #23)**
+**📞 Module C — Autonomous Follow-up Agent**
 Enrolls patients → sends scheduled WhatsApp check-ins at 8 AM via Twilio → receives patient replies → runs Gemini triage (NORMAL / CONCERNING / CRITICAL) → fires immediate SMS/WhatsApp alert to doctor if critical → logs daily recovery data for tracking.
 
 ---
