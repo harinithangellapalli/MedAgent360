@@ -1,0 +1,45 @@
+# ── MedAgent 360 · Requirements ──────────────────────────────────────────────
+# Python 3.10+  |  Pin versions for demo stability
+
+# AI / LLM
+langchain==0.2.16
+langchain-google-genai==1.0.10
+langchain-community==0.2.16
+google-generativeai==0.7.2
+
+# Vector Store / RAG
+chromadb==0.5.5
+sentence-transformers==3.0.1
+
+# PDF Parsing
+pdfplumber==0.11.4
+pandas==2.2.2
+
+# OCR & Image Processing (Module B)
+pytesseract==0.3.13
+Pillow==10.4.0
+opencv-python==4.10.0.84
+
+# Translation & Voice
+gTTS==2.5.3
+pydub==0.25.1
+indic-transliteration==2.3.42
+
+# Messaging & Scheduling (Module C)
+twilio==9.3.2
+apscheduler==3.10.4
+
+# Backend & Frontend
+fastapi==0.115.0
+uvicorn==0.30.6
+streamlit==1.38.0
+python-multipart==0.0.9
+
+# Database
+# SQLite is built-in to Python
+
+# Dev & Testing
+pytest==8.3.2
+pytest-asyncio==0.23.8
+python-dotenv==1.0.1
+httpx==0.27.2
