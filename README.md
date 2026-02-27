@@ -8,16 +8,6 @@
 
 ---
 
-## 🎯 Problem Statements Solved
-
-| PS # | Problem | Module | Status |
-|------|---------|--------|--------|
-| #24 | Patients can't understand complex lab reports | 🔬 Lab Report Intelligence | ✅ Complete |
-| #22 | Prescription instructions are illegible or in English | 💊 Prescription Parser | ✅ Complete |
-| #23 | No follow-up after hospital visits in rural areas | 📞 Autonomous Follow-up Agent | ✅ Complete |
-
----
-
 ## 💡 Solution Overview
 
 MedAgent 360 is a unified, end-to-end autonomous AI agent that:
@@ -71,7 +61,7 @@ Patient PDF / Image / WhatsApp
 
 | Layer | Technology | Purpose |
 |-------|------------|---------|
-| LLM | Google Gemini 2.0 Flash | Classification, summarisation, triage, translation |
+| LLM | Google Gemini-3.0-Flash-preview | Classification, summarisation, triage, translation |
 | Orchestration | LangChain | Agent chains, prompt management |
 | RAG | ChromaDB + sentence-transformers (all-MiniLM-L6-v2) | Medical benchmark vector store |
 | PDF Parsing | PDFPlumber + Pandas | Structured table + text extraction |
@@ -92,9 +82,9 @@ Patient PDF / Image / WhatsApp
 
 | Developer | Module | Core Responsibilities | Tech Owned |
 |-----------|--------|-----------------------|------------|
-| Dev 1 | Lab Report (PS #24) | PDF parsing, ChromaDB RAG, Gemini classification, multilingual summary, voice | PDFPlumber, LangChain, ChromaDB, gTTS |
-| Dev 2 | Prescription (PS #22) | Image preprocessing, Tesseract OCR, LLM medicine extraction, translation, audio, reminders | OpenCV, Tesseract, Pillow, IndicTrans, APScheduler |
-| Dev 3 | Follow-up (PS #23) | Twilio setup, webhook handler, Gemini symptom triage, doctor alert engine, recovery tracker | Twilio, FastAPI, SQLite, ngrok |
+| Dev 1 | Lab Report | PDF parsing, ChromaDB RAG, Gemini classification, multilingual summary, voice | PDFPlumber, LangChain, ChromaDB, gTTS |
+| Dev 2 | Prescription | Image preprocessing, Tesseract OCR, LLM medicine extraction, translation, audio, reminders | OpenCV, Tesseract, Pillow, IndicTrans, APScheduler |
+| Dev 3 | Follow-up | Twilio setup, webhook handler, Gemini symptom triage, doctor alert engine, recovery tracker | Twilio, FastAPI, SQLite, ngrok |
 | Dev 4 | Integration Lead | Streamlit dashboard, FastAPI integration, GitHub management, README, PPT, demo prep | Streamlit, FastAPI, python-pptx |
 
 ---
@@ -243,7 +233,7 @@ medagent360/
 
 | Risk | Mitigation |
 |------|-----------|
-| Gemini API rate limits | Pre-cache demo outputs; use `gemini-2.0-flash` (higher quota) |
+| Gemini API rate limits | Pre-cache demo outputs; use `gemini-3.0-flash-previwe` (higher quota) |
 | Tesseract low accuracy on handwriting | Auto-fallback to handwritten mode; 5 pre-tested images ready |
 | Twilio sandbox not approved | Screenshots prepared; SMS fallback configured |
 | Streamlit crash during demo | All 3 demo paths tested pre-presentation; backup screenshots in slides |
@@ -254,10 +244,5 @@ medagent360/
 ## 📊 Impact
 
 - **650 million** rural Indians targeted
-- **3 problem statements** solved in one unified agent
+- **problem statements** solved in one unified agent
 - **3 languages** supported: English, Telugu, Hindi
-- **0 to demo** in 24 hours
-
----
-
-*Built in 24 hours at KLH HackWithAI 2026 | Feb 27–28, 2026 | Projected Score: 97/100*
